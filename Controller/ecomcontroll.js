@@ -57,9 +57,9 @@ export const getbyname=async(req,res)=>{
     try {
         const {name}=req.params
 
-        const byname=await ecom.findOne({productname:name})
+        const getting=await ecom.findOne({productname:name})
 
-        res.status(200).json({byname})
+        res.status(200).json({getting})
         
     } catch (error) {
         console.log(error);
