@@ -77,9 +77,9 @@ export const getbyprodtype=async(req,res)=>{
         console.log(prodtype);
         
 
-        const byprodtype=await ecom.find({producttype:prodtype})
+        const getting=await ecom.find({producttype:prodtype})
 
-        res.status(200).json({byprodtype})
+        res.status(200).json({getting})
         
     } catch (error) {
         console.log(error);
