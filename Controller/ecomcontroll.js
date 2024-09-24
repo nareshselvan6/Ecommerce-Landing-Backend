@@ -68,6 +68,27 @@ export const getbyname=async(req,res)=>{
     }
 }
 
+//  GET BY PRODUCTTYPE
+
+export const getbyprodtype=async(req,res)=>{
+    try {
+        const {prodtype}=req.params
+
+        console.log(prodtype);
+        
+
+        const byprodtype=await ecom.find({producttype:prodtype})
+
+        res.status(200).json({byprodtype})
+        
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("error occured while geting by name")
+        
+    }
+}
+
+
 // PUT
 
 export const update=async(req,res)=>{
